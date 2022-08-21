@@ -12,8 +12,8 @@
 <br>
 <br>
 <input type="button" value="PLAY" onclick="music() , window.open('stage1.html')" target="_blank">
-<input type="button" value="LoAd" onclick="function OpenWindow()">
-<input type="button" value="CloSe" onclick="function CloseWindow()">
+<input type="button" value="LoAd" onclick="openWindow()">
+<input type="button" value="CloSe" onclick="closeWindow()">
 
     <audio id="audio" src="https://github.com/ren-u/website-music/blob/main/Coldplay%20X%20BTS%20-%20My%20Universe%20(Official%20Video).mp3?raw=true"></audio>
 <script>
@@ -21,15 +21,14 @@
         var audio = document.getElementById("audio");
         audio.play();
       }
-    
-    var window;
   
-        function OpenWindow() {
-            window = window
-                     .open("https://ren-u.github.io/virtual/myuniverse/video-start.html", "_blank", "width=200, height=94");
-        }
+    var newWindow;  
   
-        function CloseWindow() {
-            window.close();
-        }
+function openWindow() {  
+  newWindow = window.open("video-start.html", "myWindow", "width=200,height=100");  
+}  
+  
+function closeWindow() {  
+  newWindow.close();  
+}  
 </script>
